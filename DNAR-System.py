@@ -115,18 +115,6 @@ for doc in documents:
     for i, chunk in enumerate(chunks):
         chunked_documents.append({"id": f"{doc['id']}_chunk{i + 1}", "text": chunk})
 
-# Function to generate embeddings
-#def get_embedding(text):
-#    embedding = default_ef(text)
-#    print("==== Generating embeddings...1 ====")
-#    return embedding
-
-
-# Generate embeddings for the document chunks
-#for doc in chunked_documents:
-#    print("==== Generating embeddings...2 ====")
-#    doc["embedding"] = get_embedding(doc["text"])
-
 # Upsert documents with embeddings into Chroma
 for doc in chunked_documents:
     print("==== Inserting chunks into db;;; ====")
@@ -167,10 +155,6 @@ def generate_response(question, relevant_chunks):
     answer = response
     return answer
 
-
-# Example query
-# query_documents("tell me about AI replacing TV writers strike.")
-# Example query and response generation
 def display():
     running = True
     while running:
