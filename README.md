@@ -1,2 +1,2 @@
 # RAG
-TechX Project1,Retrieval-Augmented Generation + Artificial intelligence
+TechX Project,Retrieval-Augmented Generation + Artificial intelligence
